@@ -3,4 +3,3 @@ pipeline:
     image: gcc
     commands:
       - ls
-      - ls
