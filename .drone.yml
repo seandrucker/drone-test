@@ -2,4 +2,4 @@ pipeline:
   build:
     image: gcc
     commands:
-      - make
+      - ls
