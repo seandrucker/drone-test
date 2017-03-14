@@ -12,8 +12,9 @@ pipeline:
       - pwd
 
   build2:
-    image: plugins/docker
+    image: gcc
     commands:
       - ls -al ~
       - pwd
+      - ping build
 
