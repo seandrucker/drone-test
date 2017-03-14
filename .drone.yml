@@ -5,16 +5,19 @@ workspace:
 pipeline:
   build:
     image: gcc
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     commands:
       - ls -al
       - ls -al /go
       - echo "hello" > hello.txt
       - pwd
+      - curl -v --unix-socket /var/run/docker.sock http:/v1.26/containers/json
 
   build2:
     image: gcc
     commands:
       - ls -al ~
       - pwd
-      - ping build
+
 
