@@ -1,3 +1,7 @@
+workspace:
+  base: /go
+  path: src/github.com/sundryp/drone-test
+  
 pipeline:
   build:
     image: gcc
@@ -5,4 +9,4 @@ pipeline:
       - ls -al /
       - ls -al
       - pwd
-      
+
