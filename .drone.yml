@@ -4,15 +4,11 @@ workspace:
   
 pipeline:
   build:
-    image: gcc
+    image: docker:17.03.0-ce
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     commands:
-      - ls -al
-      - ls -al /go
-      - echo "hello" > hello.txt
-      - pwd
-      - curl -v --unix-socket /var/run/docker.sock http:/v1.26/containers/json
+      - docker version
 
   build2:
     image: gcc
