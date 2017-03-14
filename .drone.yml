@@ -6,7 +6,7 @@ pipeline:
   build:
     image: gcc
     commands:
-      - ls -al /
+      - ls -al ~
       - ls -al
       - pwd
 
