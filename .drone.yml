@@ -6,7 +6,13 @@ pipeline:
   build:
     image: gcc
     commands:
-      - ls -al ~
+      - ls -al
+      - echo "hello" > hello.txt
+      - pwd
+
+  build2:
+    image: gcc
+    commands:
       - ls -al
       - pwd
 
